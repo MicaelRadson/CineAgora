@@ -1,0 +1,103 @@
+.container {
+    min-height: 100vh;
+    padding: 56px 20px 72px;
+    background:
+    radial-gradient(circle at top, rgba(245, 158, 11, 0.22), transparent 34%),
+    radial-gradient(circle at 20% 20%, rgba(251, 191, 36, 0.12), transparent 22%),
+        linear-gradient(180deg, #050816 0%, #0b1220 48%, #02040b 100%);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.25rem;
+    color: #fbbf24;
+}
+
+.lista-filmes {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.lista-filmes article {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 100%;
+    padding: 14px;
+    border-radius: 22px;
+    background:
+        linear-gradient(180deg, rgba(8, 15, 30, 0.92), rgba(3, 7, 18, 0.95));
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(14px);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.lista-filmes article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.56);
+}
+
+.lista-filmes img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(15, 23, 42, 0.2));
+}
+
+.lista-filmes strong {
+    display: -webkit-box;
+    min-height: 2.8em;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #eff6ff;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.lista-filmes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 12px 16px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(245, 158, 11, 0.28);
+    transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;
+}
+
+.lista-filmes a:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 14px 28px rgba(245, 158, 11, 0.36);
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 28px 14px 48px;
+    }
+
+    .lista-filmes {
+        gap: 18px;
+        grid-template-columns: 1fr;
+    }
+
+    .lista-filmes article {
+        padding: 12px;
+        border-radius: 18px;
+    }
+}
+
