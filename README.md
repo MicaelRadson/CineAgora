@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Cine Agora
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto web de filmes desenvolvido em React.
 
-## Available Scripts
+## Sobre o projeto
 
-In the project directory, you can run:
+O Cine Agora exibe uma lista de filmes em cartaz, permite abrir os detalhes de cada filme e salvar favoritos no navegador.
 
-### `npm start`
+Principais funcionalidades:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Listagem dos filmes em cartaz (now playing)
+- Tela de detalhes com sinopse e nota
+- Botao para abrir busca de trailer no YouTube
+- Sistema de favoritos salvo no localStorage
+- Pagina de erro para rotas inexistentes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias usadas
 
-### `npm test`
+Este site foi feito com:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- React Router DOM (navegacao entre paginas)
+- Axios (consumo da API)
+- React Toastify (mensagens de sucesso/erro)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API utilizada
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Os dados dos filmes sao obtidos da API do TMDB (The Movie Database):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Base URL: https://api.themoviedb.org/3
+- Endpoint principal usado: /movie/now_playing
 
-### `npm run eject`
+O projeto usa a chave da API via variavel de ambiente:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- REACT_APP_API_KEY
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Como rodar o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Clonar o repositorio
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone <url-do-repositorio>
+cd cine-agora
+```
 
-## Learn More
+### 2. Instalar dependencias
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Configurar variavel de ambiente
 
-### Code Splitting
+Crie um arquivo `.env` na raiz do projeto com o seguinte conteudo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```env
+REACT_APP_API_KEY=sua_chave_do_tmdb
+```
 
-### Analyzing the Bundle Size
+Para obter a chave, crie uma conta no TMDB e gere sua API Key em:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+https://www.themoviedb.org/settings/api
 
-### Making a Progressive Web App
+### 4. Executar em modo desenvolvimento
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm start
+```
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
